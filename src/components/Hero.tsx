@@ -1,4 +1,4 @@
-import { Shield, ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import heroBg from '@/assets/hero-bg.jpg';
