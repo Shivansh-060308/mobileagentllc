@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import cameraDome from '@/assets/camera-dome.jpg';
 import cameraBullet from '@/assets/camera-bullet.jpg';
 import cameraPtz from '@/assets/camera-ptz.jpg';
+import cameraWireless from '@/assets/camera-wireless.jpg';
+import cameraThermal from '@/assets/camera-thermal.jpg';
+import cameraDoorbell from '@/assets/camera-doorbell.jpg';
 
 const products = [
   {
@@ -36,7 +39,7 @@ const products = [
   {
     name: 'Wireless Cameras',
     description: 'Wire-free security cameras with rechargeable batteries for flexible placement.',
-    image: null,
+    image: cameraWireless,
     features: ['Battery Powered', 'WiFi Connected', 'Easy Install'],
     icon: Radio,
     href: '/cameras/wireless',
@@ -45,7 +48,7 @@ const products = [
   {
     name: 'Thermal Cameras',
     description: 'Advanced thermal imaging for complete darkness visibility and temperature detection.',
-    image: null,
+    image: cameraThermal,
     features: ['Heat Detection', 'Night Vision', 'Industrial Grade'],
     icon: Thermometer,
     href: '/cameras/thermal',
@@ -54,7 +57,7 @@ const products = [
   {
     name: 'Video Doorbells',
     description: 'Smart doorbell cameras with two-way audio and instant visitor notifications.',
-    image: null,
+    image: cameraDoorbell,
     features: ['2K Video', 'Two-Way Audio', 'Smart Alerts'],
     icon: Bell,
     href: '/cameras/doorbell',
@@ -128,9 +131,11 @@ export function Products() {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
-            View All Cameras
-          </Button>
+          <Link to="/#products">
+            <Button variant="hero" size="lg">
+              View All Cameras
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

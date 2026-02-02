@@ -1,5 +1,6 @@
 import { Shield, ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import heroBg from '@/assets/hero-bg.jpg';
 
 export function Hero() {
@@ -35,14 +36,18 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button variant="hero" size="xl">
-              Get Free Installation
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="xl">
-              <Play className="h-5 w-5" />
-              View Cameras
-            </Button>
+            <a href="#contact">
+              <Button variant="hero" size="xl">
+                Get Free Installation
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="#products">
+              <Button variant="outline" size="xl">
+                <Play className="h-5 w-5" />
+                View Cameras
+              </Button>
+            </a>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">

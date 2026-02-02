@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Radio, Check, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import cameraWireless from '@/assets/camera-wireless.jpg';
 
 const features = [
   'Wire-Free Installation',
@@ -36,8 +37,12 @@ export default function WirelessCameras() {
           </Link>
           
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square rounded-2xl shadow-card w-full bg-gradient-to-br from-secondary to-card flex items-center justify-center">
-              <Radio className="h-32 w-32 text-primary/50" />
+            <div className="relative">
+              <img 
+                src={cameraWireless} 
+                alt="Wireless Security Camera" 
+                className="rounded-2xl shadow-card w-full"
+              />
               <div className="absolute top-4 right-4 px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-semibold">
                 Easy Install
               </div>
