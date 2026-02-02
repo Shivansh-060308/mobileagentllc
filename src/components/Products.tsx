@@ -1,5 +1,6 @@
-import { Camera, Eye, Wifi, Shield } from 'lucide-react';
+import { Camera, Eye, Wifi, Radio, Thermometer, Bell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import cameraDome from '@/assets/camera-dome.jpg';
 import cameraBullet from '@/assets/camera-bullet.jpg';
 import cameraPtz from '@/assets/camera-ptz.jpg';
@@ -11,6 +12,8 @@ const products = [
     image: cameraDome,
     features: ['4K Ultra HD', 'Night Vision', 'Wide Angle'],
     icon: Eye,
+    href: '/cameras/dome',
+    badge: 'Best Seller',
   },
   {
     name: 'Bullet Cameras',
@@ -18,6 +21,8 @@ const products = [
     image: cameraBullet,
     features: ['Weatherproof IP67', '100ft Night Vision', 'Motion Detection'],
     icon: Camera,
+    href: '/cameras/bullet',
+    badge: 'Most Popular',
   },
   {
     name: 'PTZ Cameras',
@@ -25,6 +30,35 @@ const products = [
     image: cameraPtz,
     features: ['30x Optical Zoom', 'Auto Tracking', 'Remote Control'],
     icon: Wifi,
+    href: '/cameras/ptz',
+    badge: 'Premium',
+  },
+  {
+    name: 'Wireless Cameras',
+    description: 'Wire-free security cameras with rechargeable batteries for flexible placement.',
+    image: null,
+    features: ['Battery Powered', 'WiFi Connected', 'Easy Install'],
+    icon: Radio,
+    href: '/cameras/wireless',
+    badge: 'Easy Install',
+  },
+  {
+    name: 'Thermal Cameras',
+    description: 'Advanced thermal imaging for complete darkness visibility and temperature detection.',
+    image: null,
+    features: ['Heat Detection', 'Night Vision', 'Industrial Grade'],
+    icon: Thermometer,
+    href: '/cameras/thermal',
+    badge: 'Industrial',
+  },
+  {
+    name: 'Video Doorbells',
+    description: 'Smart doorbell cameras with two-way audio and instant visitor notifications.',
+    image: null,
+    features: ['2K Video', 'Two-Way Audio', 'Smart Alerts'],
+    icon: Bell,
+    href: '/cameras/doorbell',
+    badge: 'Home Essential',
   },
 ];
 
@@ -51,12 +85,19 @@ export function Products() {
               key={product.name}
               className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 shadow-card hover:shadow-glow"
             >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="aspect-square overflow-hidden bg-gradient-to-br from-secondary to-card flex items-center justify-center">
+                {product.image ? (
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                ) : (
+                  <product.icon className="h-24 w-24 text-primary/30 group-hover:text-primary/50 transition-colors" />
+                )}
+                <div className="absolute top-4 right-4 px-3 py-1 bg-primary/90 text-primary-foreground rounded-full text-xs font-semibold">
+                  {product.badge}
+                </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
@@ -76,9 +117,11 @@ export function Products() {
                     </span>
                   ))}
                 </div>
-                <Button variant="outline" className="w-full">
-                  Learn More
-                </Button>
+                <Link to={product.href}>
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}
