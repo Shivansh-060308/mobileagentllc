@@ -1,5 +1,4 @@
-import { ArrowRight, Play } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import { ArrowRight, Play, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import heroBg from '@/assets/hero-bg.jpg';
@@ -22,7 +21,7 @@ export function Hero() {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-            <img src={logo} alt="Mobile Agent LLC" className="h-10 w-auto" />
+            <Shield className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Washington's Trusted Security Provider</span>
           </div>
 
