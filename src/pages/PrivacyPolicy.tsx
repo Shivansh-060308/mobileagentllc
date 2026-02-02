@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
                 <p><strong className="text-foreground">Mobile Agent LLC</strong></p>
                 <p>Email: privacy@mobileagentllc.com</p>
                 <p>Phone: (555) 123-4567</p>
-                <p>Washington State</p>
+                <p>214 206th Pl Sw Lynnwood wa 98036</p>
               </div>
             </section>
           </div>

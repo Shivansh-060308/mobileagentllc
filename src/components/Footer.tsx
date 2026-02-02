@@ -32,7 +32,7 @@ export function Footer() {
             <div className="flex flex-col gap-2 text-muted-foreground">
               <span>(555) 123-4567</span>
               <span>info@mobileagentllc.com</span>
-              <span>Washington State</span>
+              <span>214 206th Pl Sw Lynnwood wa 98036</span>
             </div>
           </div>
         </div>
