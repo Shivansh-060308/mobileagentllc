@@ -1,5 +1,5 @@
+import { Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '@/assets/logo.png';
 
 export function Footer() {
   return (
@@ -8,7 +8,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="Mobile Agent LLC" className="h-16 w-auto" />
+              <Shield className="h-8 w-8 text-primary" />
+              <span className="text-xl font-bold">Mobile Agent LLC</span>
             </div>
             <p className="text-muted-foreground max-w-md">
               Washington's trusted provider of professional security camera solutions. 
