@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="Mobile Agent LLC" className="h-12 w-auto" />
+              <img src={logo} alt="Mobile Agent LLC" className="h-16 w-auto" />
             </div>
             <p className="text-muted-foreground max-w-md">
               Washington's trusted provider of professional security camera solutions. 

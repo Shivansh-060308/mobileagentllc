@@ -19,7 +19,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
-            <img src={logo} alt="Mobile Agent LLC" className="h-10 w-auto" />
+            <img src={logo} alt="Mobile Agent LLC" className="h-14 w-auto" />
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
