@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.png';
 
 const navLinks = [
   { href: '#products', label: 'Products' },
@@ -19,7 +18,8 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
-            <img src={logo} alt="Mobile Agent LLC" className="h-14 w-auto" />
+            <Shield className="h-8 w-8 text-primary" />
+            <span className="text-xl font-bold">Mobile Agent LLC</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
